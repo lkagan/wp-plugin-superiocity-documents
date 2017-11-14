@@ -28,7 +28,7 @@ class Documents {
 		if ( is_admin() && ! is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
 			?>
 			<div class="notice notice-error is-dismissible"><p>Super Documents Requires the <em><a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced
-						Custom Fields</a></em> plugin.</p></div><?
+						Custom Fields</a></em> plugin.</p></div><?php
 		}
 	}
 
@@ -64,7 +64,7 @@ class Documents {
 			'show_in_rest'          => true,
 			'rest_base'             => 'super-document',
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
-
+			'taxonomies'            => array( 'category' ),
 		) );
 
 	}
